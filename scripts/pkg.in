@@ -106,8 +106,12 @@ get_mirror_weight() {
 }
 
 select_mirror() {
-	local default_repo="${MIRROR_BASE_DIR}/default"
+	# Do not update mirror if $TERMUX_PKG_NO_MIRROR_SELECT was set.
+        if [ -n "${TERMUX_PKG_NO_MIRROR_SELECT-}" ] && [ -n "$current_mirror" ]; then
+                return
+        fi
 
+	local default_repo="${MIRROR_BASE_DIR}/default"
 	if [ -d "@TERMUX_PREFIX@/etc/termux/chosen_mirrors" ]; then
 		# Mirror group selected
 		mirrors=($(find @TERMUX_PREFIX@/etc/termux/chosen_mirrors/ -type f ! -name "*\.dpkg-old" ! -name "*\.dpkg-new" ! -name "*~"))
