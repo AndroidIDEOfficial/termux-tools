@@ -105,8 +105,7 @@ get_mirror_weight() {
 	echo $WEIGHT
 }
 
-select_mirror() {
-}
+select_mirror() { :; }
 
 update_apt_cache() {
 	local current_host
