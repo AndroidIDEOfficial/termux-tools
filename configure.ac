@@ -32,7 +32,7 @@ copyright="Copyright (C) 2022 Termux."
 if test "${TERMUX_APP_PACKAGE+set}" = set; then
   termux_app_package="$TERMUX_APP_PACKAGE"
 else
-  termux_app_package="com.termux"
+  termux_app_package="com.itsaky.androidide"
 fi
 if test "${TERMUX_BASE_DIR+set}" = set; then
   termux_base_dir="$TERMUX_BASE_DIR"
@@ -92,7 +92,7 @@ AC_SUBST(termux_package_manager)
 
 AC_PROG_LN_S
 
-AC_CONFIG_FILES([Makefile scripts/Makefile doc/Makefile
+AC_CONFIG_FILES([Makefile scripts/Makefile
 mirrors/Makefile motds/Makefile])
 
 AC_OUTPUT
