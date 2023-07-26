@@ -109,7 +109,7 @@ get_mirror_url() {
 get_mirror_weight() {
 	source "$1"
 	if [[ ! "$WEIGHT" =~ ^[0-9]+$ ]]; then
-		echo "Error: Invalid weight in mirror $1" > /dev/stderr
+		echo "Error: Invalid weight in mirror $1" >&2
 		exit 1
 	fi
 	echo $WEIGHT
@@ -119,7 +119,7 @@ select_mirror() { :; }
 
 update_apt_cache() {
 	local current_host
-	current_host=$(sed -nE -e 's|^\s*deb\s+https?://(.+)\s+stable\s+main$|\1|p' @TERMUX_PREFIX@/etc/apt/sources.list | head -n 1)
+	current_host=$(head -n 1 <(sed -nE -e 's|^\s*deb\s+https?://(.+)\s+stable\s+main$|\1|p' @TERMUX_PREFIX@/etc/apt/sources.list) || true)
 
 	if [ -z "$current_host" ]; then
 		# No primary repositories configured?
