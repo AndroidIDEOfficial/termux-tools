@@ -44,8 +44,13 @@ motd:
 
 	@echo "Welcome to AndroidIDE Terminal!" > motd
 	@echo "" >> motd
-	@echo "Donate:     https://androidide.com/donate.php" >> motd
+	@echo "Donate:     https://androidide.com/donate" >> motd
 	@echo "Community:  https://t.me/androidide_discussions" >> motd
+
+        @echo "" >> motd
+        @echo "Setup AndroidIDE:" >> motd
+        @echo "" >> motd
+        @echo " - Setup IDE: idesetup -c" >> motd
 
 	@echo "" >> motd
 	@echo "Working with packages:" >> motd
