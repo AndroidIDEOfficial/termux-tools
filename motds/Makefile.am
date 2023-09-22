@@ -50,10 +50,10 @@ motd:
 	@echo "Updates:    https://t.me/AndroidIDEOfficial" >> motd
 	@echo "Donate:     https://androidide.com/donate/" >> motd
 
-        @echo "" >> motd
-        @echo "Setup AndroidIDE:" >> motd
-        @echo "" >> motd
-        @echo " - Setup IDE: idesetup -c" >> motd
+	@echo "" >> motd
+	@echo "Setup AndroidIDE:" >> motd
+	@echo "" >> motd
+	@echo " - Setup IDE: idesetup -c" >> motd
 
 	@echo "" >> motd
 	@echo "Working with packages:" >> motd
