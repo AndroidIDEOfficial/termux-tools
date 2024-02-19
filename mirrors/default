@@ -1,4 +1,4 @@
 # This file is sourced by pkg
 # Cached (by cloudflare) variant of packages.termux.dev
 WEIGHT=10
-MAIN="https://androidide.com/packages/apt/termux-main"
+MAIN="https://packages.androidide.com/apt/termux-main"
